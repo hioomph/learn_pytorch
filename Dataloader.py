@@ -5,7 +5,7 @@ from torch.utils.tensorboard import SummaryWriter
 dataset_transform = torchvision.transforms.Compose([
     torchvision.transforms.ToTensor()
 ])
-test_data = torchvision.datasets.CIFAR10(root="./dataset", train=False, transform=dataset_transform, download=True)
+test_data = torchvision.datasets.CIFAR10(root="../DATASET/CIFAR10", train=False, transform=dataset_transform, download=True)
 
 test_loader = DataLoader(dataset=test_data, batch_size=64, shuffle=True, num_workers=0, drop_last=False)
 # batch_size=4      => 每次从dtest_data中取四张图片进行打包

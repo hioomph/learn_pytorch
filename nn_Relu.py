@@ -10,7 +10,7 @@ from torch.utils.tensorboard import SummaryWriter
 #
 # input = torch.reshape(input, (-1, 1, 2, 2))
 
-dataset = torchvision.datasets.CIFAR10("./dataset", train=False,
+dataset = torchvision.datasets.CIFAR10(root="../DATASET/CIFAR10", train=False,
                                        transform=torchvision.transforms.ToTensor(),
                                        download=True)
 dataloader = DataLoader(dataset, batch_size=64)

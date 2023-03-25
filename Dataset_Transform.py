@@ -8,8 +8,8 @@ from torch.utils.tensorboard import SummaryWriter
 dataset_transform = torchvision.transforms.Compose([
     torchvision.transforms.ToTensor()
 ])
-train_set = torchvision.datasets.CIFAR10(root="./dataset", train=True, transform=dataset_transform, download=True)
-test_set = torchvision.datasets.CIFAR10(root="./dataset", train=False, transform=dataset_transform, download=True)
+train_set = torchvision.datasets.CIFAR10(root="../DATASET/CIFAR10", train=True, transform=dataset_transform, download=True)
+test_set = torchvision.datasets.CIFAR10(root="../DATASET/CIFAR10", train=False, transform=dataset_transform, download=True)
 # 上述原始数据集的格式为PIL，如果要用transform进行处理，需要转换为Tensor格式
 # 注意：如果要在dataset文件夹下放已经下载好的数据集，要传入.tar.gz的压缩包格式，否则无法识别，会重新下载
 

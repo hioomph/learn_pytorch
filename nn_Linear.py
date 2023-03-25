@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 from torch.nn import Linear
 from torch.utils.tensorboard import SummaryWriter
 
-dataset = torchvision.datasets.CIFAR10("dataset", train=False,
+dataset = torchvision.datasets.CIFAR10(root="../DATASET/CIFAR10", train=False,
                                        transform=torchvision.transforms.ToTensor(),
                                        download=True)
 dataloader = DataLoader(dataset, batch_size=64, drop_last=True)
